@@ -28,7 +28,7 @@ RUN make -j $(nproc)
 RUN objcopy --only-keep-debug tmate tmate.symbols && chmod -x tmate.symbols && strip tmate
 RUN ./tmate -V
 
-FROM alpine:3.9
+FROM alpine:3.20.3
 
 RUN apk --no-cache add bash
 RUN mkdir /build
